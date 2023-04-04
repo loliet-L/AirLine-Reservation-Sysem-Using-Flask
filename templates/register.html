@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="{{ url_for ('static',filename='css/login.css') }}"> -->
+    <link rel="stylesheet" href="../static/css/login.css">
+    <title>Register</title>
+</head>
+<body>
+    <div id="register-page">
+        <span  id="reg-page_msg" class="register-pg_msg">{{register_msg}}</span>
+        <div class="form-box">
+           <h1>USER REGISTRATION</h1>
+            <form id="register" class="input-group" method="POST">
+                <div class="input-div">
+                    <input type="text" class="input-field" name="name1" placeholder="Name" required >
+                </div>
+                <div class="input-div">
+                    <input type="email" class="input-field" name="email" placeholder="Email Id" required>
+                </div>
+                <div class="input-div">
+                    <input type="text" class="input-field" name="S_uname" placeholder="User Name" required>
+                </div>
+                <div class="input-div">
+                    <input type="password" class="input-field" name="S_pass" placeholder="Enter Password" required>
+                </div>
+                <div class="input-div">
+                    <input type="password" class="input-field" name="Cpass" placeholder="Confirm Password" required>
+                </div>
+                <div class="input-div">
+                    <input type="radio" name="gender" class="gender" id="male" value="Male"><label for="male" class="gender-btn">Male</label>                 
+                    <input  type="radio" name="gender" class="gender" id="female" value="Female"><label for="female" class="gender-btn">Female</label>
+                    <hr>
+                </div>
+                <div class="input-div">
+                    <input type="tel" class="input-field" name="phone" placeholder="Contact no" required>
+                </div>
+                <div>
+                    <!-- <button type="submit" class="submit-btn">SIGN UP</button> -->
+                    <!-- <input type="submit" class="submit-btn" value="SIGN UP" onclick="display_msg()"> -->
+                    <button type="submit" class="submit-btn">SIGN UP</button>
+                    <button type="reset" class="submit-btn">RESET</button>
+                    <!-- <a href="/"><button class="submit-btn">RESET</button></a> -->
+                </div>
+                
+            </form>
+            <span  id="reg-page_msg" class="register-pg_msg">{{register_msg_er}}</span>
+            <div>
+                <span class="link">Click <a href="/login">here</a> to login</span>
+            </div>
+        </div>
+    </div>
+    <script>
+    </script>
+</body>
+</html>

@@ -1,0 +1,917 @@
+
+:root{
+    --primary:#ffb310;
+    --linear: linear-gradient(to right , #ff105f,#ffad06);
+    --secondary:#161616;
+    --pure:#FFFFFF;
+    --ternary:#898989;
+    --light:#F2F2F2;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smotthing:antialiased;
+}
+
+.container{
+    max-width: 1152px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+ 
+/* HEADER */
+header{
+    background-color: var(--secondary);
+}
+
+header .container{
+    max-width: 100%;
+    margin: 0 25px;
+}
+
+header nav .left a{
+    color: var(--pure);
+    text-decoration: none;
+    margin-right: 2rem;
+    text-transform: uppercase;
+    transition: all .3s ease;
+}
+
+header nav .left a:hover{
+    color: var(--primary);
+}
+
+header nav{
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    background: var(--secondary);
+}
+img.logo{
+    height: 4rem;
+    width: 4rem;
+    margin: 0  1rem;
+    border-radius: 50%;
+}
+
+
+/* -------------------- */
+
+header #slider .header-content {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    /* right: 564px; */
+    width: 36rem;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+
+header #slider .header-content h1 {
+    font-size: 50px;
+    color: #fff;
+    /* text-align: center; */
+    text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #ffaf02, 0 0 10px #ff8801, 0 0 10px #ff9100, 0 0 10px #ff9a03, 0 0 10px #ffae00;
+  }
+
+header #slider .header-content p{
+    color: rgb(0, 0, 0);
+    font-size: 28px;
+    font-weight: bolder;
+    text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #ffaf02, 0 0 5px #ff8801, 0 0 5px #ff9100, 0 0 5px #ff9a03, 0 0 5px #ffae00;
+    margin-bottom: 1.5rem;
+}
+
+
+
+/* -------------------- */
+
+#slider{
+    overflow: hidden;
+}
+
+#slider figure{
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+}
+
+#slider figure img{
+    width: 20%;
+    float: left;
+    height: 650px;
+}
+
+@keyframes slider {
+    0%{
+        left: 0;
+    }
+    20%{
+        left: 0;
+    }
+    25%{
+        left: -100%;
+    }
+    45%{
+        left: -100%;
+    }
+    50%{
+        left: -200%;
+    }
+    70%{
+        left: -200%;
+    }
+    75%{
+        left: -300%;
+    }
+    95%{
+        left: -300%;
+    }
+    100%{
+        left: -400%;
+    }
+
+}
+
+
+/* SECTIONS */
+section{
+    padding: 6rem 0;
+}
+
+.section-heading{
+    color: var(--secondary);
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 0.5rem;
+}
+
+.section-heading span{
+    color: var(--primary);
+}
+
+/* services */
+
+section.services{
+    background: var(--light);
+}
+
+section.services .card-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 6rem;
+    grid-row-gap: 6rem;
+}
+
+section.services .card-wrapper .card{
+    background: var(--pure);
+    padding: 3rem 2rem;
+    position: relative;
+    padding-top: 5rem;
+    text-align: center;
+    transition: all .3s ease;
+}
+
+section.services .card-wrapper .card img{
+    position: absolute;
+    top: -2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    /* height: 35%; */
+    width: 19%;
+    padding: 0.7rem;
+    background: var(--primary);
+}
+
+section.services .card-wrapper .card h2{
+    /* font-weight: 400; */
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+section.services .card-wrapper .card p{
+    font-family: 'Lato',sans-serif;
+    color: var(--ternary);
+    line-height: 1.6;
+}
+
+section.services .card-wrapper .card:hover{
+    background: var(--secondary);
+}
+
+section.services .card-wrapper .card:hover h2 {
+    color: var(--primary);
+}
+
+section.services .card-wrapper .card:hover p{
+    color: var(--pure);
+}
+
+
+
+
+
+
+/* blogs */
+section.blog{
+    background: var(--secondary);
+    /* clip-path: polygon(0 0 ,100% 0 , 100% 100% , 67% 90% ,0 100%); */
+    padding-bottom: 10rem;
+}
+section.blog .section-heading{
+    color: var(--pure);
+}
+
+section.blog .card-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 3rem;
+}
+
+section.blog .card-wrapper .card{
+    background: var(--pure);
+}
+
+section.blog .card-wrapper .card .img-wrapper{
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+}
+section.blog .card-wrapper .card .img-wrapper img{
+    width: 342px;
+}
+
+section.blog .card-wrapper .card .card-content{
+    padding: 1rem 2rem;
+}
+
+section.blog .card-wrapper .card .card-content h1{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+section.blog .card-wrapper .card .card-content a{
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+section.blog .card-wrapper .card .card-content a:hover{
+    color: var(--primary);
+}
+
+section.blog .card-wrapper .card .card-content span{
+    color: var(--ternary);
+    font-size: 0.8rem;
+}
+
+section.blog .card-wrapper .card .card-content p{
+    font-family: 'Lato',sans-serif;
+    color: var(--ternary);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* section.blog .card-wrapper .card .card-content a.read-more{
+    font-size: 0.8rem;
+} */
+
+
+/* REVIEWS */
+
+section.reviews{
+    background: var(--light);
+}
+
+
+.section-heading+p{
+    color: var(--ternary);
+    /* font-family: 'Lato',sans-serif; */
+    margin-bottom: 8rem;
+    text-align: center;
+}
+
+section.reviews .slider .slide img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 2rem;
+}
+
+section.reviews .slider .slide{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 10rem;
+}
+
+section.reviews .slider .slide p{
+    /* font-family: 'Lato',sans-serif; */
+    color: var(--ternary);
+    margin-bottom: 1rem;
+}
+
+section.reviews .slider .slide span{
+    font-size: 0.8rem;
+}
+
+section.reviews .slider-dots .dots{
+    list-style-type: none;
+    display: flex!important;
+    justify-content: center;
+
+}
+
+section.reviews .slider-dots{
+    margin-top: 3rem;
+}
+
+section.reviews .slider-dots button{
+    font-size: 0;
+    width: 8px;
+    height: 5px;
+    margin-right: 0.3rem;
+    border: none;
+    outline: none;
+    background: var(--ternary);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+section.reviews .dots li.slick-active button{
+    background: var(--primary);
+    width: 20px;
+}
+
+/* Contact */
+section.contact .card-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 3rem;
+}
+
+section.contact .card-wrapper .card{
+    text-align: center;
+}
+
+section.contact .card-wrapper .card img{
+    width: 50px;
+    margin-bottom: 3rem;
+}
+
+section.contact .card-wrapper .card h2{
+    font-weight: 400px;
+    margin-bottom:1rem ;
+}
+
+section.contact .card-wrapper .card h6{
+    font-size: 1rem;
+    color: var(--ternary);
+    font-weight: 400;
+    margin-bottom: 4rem;
+}
+
+section.contact .input-wrap{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+section.contact .input-wrap-2{
+    display: flex;
+    flex-direction: column;
+}
+
+section.contact .input-wrap-2 input{
+    margin-bottom: 2rem;
+}
+
+section.contact input{
+    padding: 0.5rem;
+    border: 1px solid var(--ternary);
+    font-size: 0.8rem;
+}
+
+section.contact .input-wrap-2 textarea{
+    padding: 0.5rem;
+    border: 1px solid var(--ternary);
+    font-size: 1rem;
+}
+
+section.contact input:focus , section.contact .input-wrap-2 textarea:focus{
+    outline: var(--ternary);
+}
+
+section.contact .btn-wrapper{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* FOOTER */
+footer{
+    background: var(--linear);
+    text-align: center;
+    padding: 4rem 0;
+}
+
+footer .footer-socials{
+    display: flex;
+    justify-content: center;
+    /* margin-bottom: 3rem; */
+}
+
+footer .f_left .footer-socials a{
+     background: var(--pure);
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    /* border: 1px solid var(--secondary); */
+    margin-right: 0.6rem;
+    transition: all .3s ease;
+    margin-right: 1rem; 
+    
+
+}
+
+footer .f_left img.logo{
+    margin-bottom: 1rem;
+}
+
+footer .footer-socials a:hover{
+    background: var(--primary);
+}
+
+footer .footer-socials a img{
+    width: 100%;
+    height: 100%;
+}
+
+footer .f_mid ul li{
+    line-height: 1.5rem;
+    text-decoration: none;
+    list-style: none;
+    text-align: left;
+
+}
+
+footer .f_mid ul a {
+    text-decoration: none;
+    color: var(--pure);
+}
+
+footer .copy-right p{
+    color: var(--pure);
+    margin-top: 2rem;
+}
+
+
+
+/* Search Flights */
+
+#search-flights {
+    padding: 4rem 1rem;
+    /* height: 90vh; */
+}
+
+#search-flights .sflight-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 50%;
+    padding: 2rem;
+    margin: 2.5rem auto;
+}
+
+.form-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.form-elements {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0rem 1rem;
+}
+
+/* .form-1 input {
+    border: none;
+    border-bottom: 1px solid var(--primary);
+    padding: .25rem 1rem;
+    margin: .25rem;
+    outline: none;
+    font-size: .85rem;
+    text-transform: normal;
+} */
+
+.form-1 label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 2rem;
+}
+
+/* #search-flights .sflight-container .form-elements select {
+    text-transform: capitalize;
+} */
+
+#search-flights .sflight-container .form-elements input[type="submit"]{
+    margin-top: 4rem;
+}
+
+#search-flights .sflight-container .form-elements select{
+    font-size: 18px;
+    width: 130px;
+    border: none;
+    border-bottom: 3px solid var(--primary);
+}
+
+hr {
+    border: none;
+    border-bottom: 3px dotted var(--primary);
+}
+
+.display-flights {
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    height: 300px;
+}
+
+/* Error message--Start */
+#search-flights .error_msg{
+    padding: 6px 19px;
+    color: #D8000C;
+    /* background-color: #FFD2D2; */
+    margin: 10px 22px;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: block;
+}
+
+/* #search-flights .error-msg-div{
+    margin: 1rem 0;
+} */
+/* Error message--End */
+
+/* Tables start */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid var(--secondary);
+}
+
+th,
+td {
+    text-align: left;
+    padding:0;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+tr:nth-child(even) {
+    background-color: #fad586;
+}
+/* Tables end */
+
+
+
+
+
+/* book-ticket */
+section#book-ticket{
+    background: var(--light);
+    height: 100%;
+    width: 100%;
+    background-image:url("../images/airlinebg.png");
+    background-position: center;
+    background-size: cover;
+    /* position: absolute; */
+
+}
+
+section#book-ticket h1{
+    text-align: center;
+}
+
+
+section#book-ticket .book-ticket-container{
+    margin: 0 auto;
+    background:rgba(0, 0, 0, 0.3);
+    padding: 50px 15px;
+    /* overflow: hidden; */
+    box-shadow: 4px 4px 9px black;
+    /* border: 2px solid red; */
+    width: 444px;
+    /* height: 485px; */
+}
+
+section#book-ticket .book-ticket-container .form-elements{
+    /* border: 2px solid red; */
+    margin: 1.5rem 0;
+}
+
+section#book-ticket .book-ticket-container .form-elements input{
+    display:inline-block;
+    line-height: 28px;
+    width: 12rem;
+}
+
+section#book-ticket .book-ticket-container .form-elements input[type="submit"]{
+    margin-left: 7rem;
+    padding: 0.4rem 0rem;
+    width: 143px;
+    font-size: 13px;
+}
+
+section#book-ticket .book-ticket-container .form-elements label{
+    display: inline-block;
+    width: 106px;
+    color: var(--pure);
+}
+
+section#book-ticket .book-ticket-container .form-elements select#f_class{
+    padding: 0.5rem;
+    line-height: 28px;
+    width: 12rem;
+}
+
+section#book-ticket .book-ticket-container #book-ticket-msg{
+    font-size: 20px;
+    background-color: var(--primary)
+}
+
+section#book-ticket .book-ticket-container span#fid-msg{
+    color: #D8000C;
+    background-color: #FFD2D2;
+    font-size: 17px;
+    padding: 2px 3px;
+}
+
+
+/* view ticket */
+
+section#view-ticket{
+    background: var(--light);
+    /* height: 100%; */
+    /* width: 100%; */
+    height: 800px;
+    /* background-image:url("../images/airlinebg.png"); */
+    background-color: var(--light);
+    background-position: center;
+    background-size: cover;
+    /* position: absolute; */
+    padding: 5rem;
+}
+
+section#view-ticket div.vt_input{
+    /* border: 2px solid red; */
+    margin: 2rem;
+}
+
+section#view-ticket label{
+    margin: 1rem;
+}
+
+section#view-ticket .view-fticket{
+    background: var(--primary);
+    border: 4px solid var(--secondary);
+    margin: 2rem;
+    width: 1000px;
+    position: relative;
+
+}
+
+section#view-ticket .view-fticket .heading{
+    background: var(--ternary);
+    color: var(--pure);
+    padding: 0.5rem 1rem;
+}
+
+section#view-ticket .view-fticket .vt_foot{
+    background: var(--ternary);
+    padding: 0.5rem 1rem 0.5rem 44rem;
+    color: var(--pure);
+}
+
+/* section#view-ticket .view-fticket .vt_t-num{
+    top: 55px;
+    position: absolute;
+    right: 30px;
+} */
+
+section#view-ticket .vt_input input{
+    /* border: var(--primary); */
+    line-height: 30px;
+    /* border: none;
+    border-bottom: var(--primary); */
+}
+
+/* section#view-ticket .view-fticket .vt_t-num input{
+    font-size: large;
+    font-weight: bold;
+    width: 140px;
+} */
+
+/* section#view-ticket .view-fticket .vt_f-id {
+    font-size: large;
+    font-weight: bold;
+    width: 140px;
+} */
+section#view-ticket .view-fticket div.vt_dest{
+    position: absolute;
+    top: 97px;
+    left: 211px;
+}
+
+section#view-ticket .view-fticket .vt_f-id{
+    top: 67px;
+    position: absolute;
+    right: 30px;
+}
+
+/* section#view-ticket .view-fticket input{
+    border: none;
+    font-weight: bold;
+    font-size: large;
+    background: transparent;
+} */
+
+/* section#view-ticket .view-fticket .from-to-div input{
+    width: 145px;
+} */
+
+section#view-ticket input:focus{
+    outline: none;
+}
+
+section#view-ticket .view-fticket  .plane-logo{
+    /* border: 2px solid black; */
+    width: 120px;
+    position: absolute;
+    top: 75px;
+    left: 469px;
+}
+
+section#view-ticket .view-fticket  .plane-logo img{
+    width: 120px;
+}
+
+section#view-ticket .view-fticket label.highlight{
+    font-size: 20px;
+    font-weight: 10px;
+    line-height: 45px;
+}
+section#view-ticket span#cance-ticket-error{
+    color: #D8000C;
+}
+
+section#view-ticket .view-fticket div.vt_from #vt_name{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+
+section#view-ticket input#show_tk_btn{
+    margin: 2rem 7rem
+}
+
+
+
+/* cancel ticket */
+section#cancel-ticket{
+    background: var(--light);
+    /* height: 100%; */
+    /* width: 100%; */
+    height: 500px;
+    /* background-image:url("../images/airlinebg.png"); */
+    background-color: var(--pure);
+    background-position: center;
+    background-size: cover;
+    padding: 4rem 5rem;
+    /* position: absolute; */
+}
+
+section#cancel-ticket .cancel-div{
+    position: relative;
+    display: inline-block;
+    /* width: 400px;
+    margin-top: 4rem; */
+
+}
+
+section#cancel-ticket .cancel-div label{
+    margin:1rem;
+}
+
+section#cancel-ticket .cancel-div input{
+    line-height: 28px;
+}
+
+section#cancel-ticket .cancel-div input[type="button"]{
+    margin: 4rem;
+}
+
+section#cancel-ticket .cancel-div div.cancel-element{
+    margin: 5rem 0rem;
+    width: 537px;
+}
+
+section#cancel-ticket .cancel-div div.cancel-element label{
+    margin-bottom: 2rem;
+}
+
+section#cancel-ticket span#cancel-tk-msg-er{
+    position: absolute;
+    /* top: 5rem; */
+    margin: 1.5rem 3rem;
+    color: #D8000C;
+    background-color: #FFD2D2;
+}
+section#cancel-ticket span#cancel-tk-msg{
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    position: absolute;
+    top: 12rem;
+}
+
+section#cancel-ticket div#cancel-button{
+    margin-left: 7rem;
+    margin-top: 7rem;
+}
+
+
+/* UTILITIES */
+.flex{
+    display: flex;
+}
+
+.items-center{
+    align-items: center;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.space-around{
+    justify-content: space-around;
+}
+
+.btn{
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border:2px solid var(--secondary);
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all .3s ease;
+}
+
+.btn-primary{
+    background: var(--primary);
+    color: var(--secondary);
+}
+
+.btn-primary:hover{
+    background: transparent;
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.btn-secondary{
+    background: transparent;
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-secondary:hover{
+    background: var(--primary);
+    color: var(--secondary);
+}
+

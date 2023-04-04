@@ -1,0 +1,14 @@
+Flask
+Flask-Mail
+Flask-MySQLdb
+Flask-Session
+idna
+itsdangerous
+Jinja2
+joblib
+MarkupSafe
+mysqlclient
+regex
+requests
+tqdm
+urllib3

@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<section id="view-ticket">
+    <h1 class="section-heading"><span>View</span> Tickets</h1>
+    <form action="/view-ticket" method='post'>
+        <div class="vt_input">
+            <label for="t_num">Enter Ticket Number</label>
+            <input type="text" name="vt_ticket_num" id="ticket_num">
+        </div>
+        <div>
+            <span id="cance-ticket-error">{{cancel_ticket_error}}</span>
+        </div>
+        <div>
+            <input id="show_tk_btn" type="submit" class="btn btn-primary" value="Show Ticket">
+        </div>
+    
+    </form>
+        <div class="view-fticket">
+            
+                <div class="heading">
+                    <h1>Air Ticket</h1>
+                </div>
+                <div class="plane-logo">
+                    <img src="../static/images/ticket-logo.png" alt="">
+                </div>
+                <div class="vt_name">
+                    <label for="vt_pname">Passenger Name</label>
+                    <label id="psname" class="highlight">{{pass_name}}</label>
+                </div>
+                <div class="from-to-div flex">
+                    <div class="vt_source">
+                        <label for="vt_from">From</label>
+                        <label class="highlight">{{source}}</label>
+                    </div>
+                    <div class="vt_dest">
+                        <label for="vt_to">To</label>
+                        <label class="highlight">{{dest}}</label>
+                        
+                    </div>
+                </div>
+                
+                <div class="vt_dept-time">
+                    <label for="vt_dtime">Departure</label>
+                    <label class="highlight">{{dept}}</label>
+                    
+                </div>
+                <div class="vt_t-num">
+                    <label for="vt_tnum">Ticket No</label>
+                    <label class="highlight">{{ticket_num}}</label>
+                    
+                </div>
+                <div class="vt_f-id">
+                    <label for="vt_fid">Flight Id</label>
+                    <label class="highlight">{{fl_id}}</label>
+                </div>
+                <div class="vt_foot">
+                    <h2>Happy Journey!!</h3>
+                </div>            
+        </div>
+        
+    
+</section>
+{% endblock %}

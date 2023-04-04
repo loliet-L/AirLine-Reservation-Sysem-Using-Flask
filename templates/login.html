@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="{{ url_for ('static',filename='css/login.css') }}"> -->
+    <link rel="stylesheet" href="../static/css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Register</title>
+</head>
+<body>
+    <div id="login-page">
+        <div class="form-box">
+           <h1>USER LOGIN</h1>
+           <form id="login" class="input-group" method="POST">
+            <div class="input-div">
+                <i class="fas fa-user icon"></i>
+                <input type="text" class="input-field" name="uname" placeholder="User Id" required>
+            </div>
+            <div class="input-div">
+                <i class="fas fa-lock icon"></i>
+                <input type="password" class="input-field" name="pass" placeholder=" Password" required>
+            </div>
+            <div><span id="login-err">{{msg}}</span></div>
+            <button type="submit" class="submit-btn">Log in</button>
+            <div>
+                Create an account? Click <a href="/register">Here</a>
+            </div>
+        </form>
+        </div>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>Airline Reservation System</title>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav id="main-nav" class="flex items-center justify-between">
+                <div class="left flex items-center">
+                    <div class="branding">
+                        <img  class="logo" src="../static/images/logo1.png" alt="">
+                    </div>
+                    <div>
+                        <a href="/home">Home</a>
+                        <a href="/search-flights">Search Flights</a>
+                        <a href="/book-ticket">Book Tickets</a>
+                        <a href="/view-ticket">View Ticket</a>
+                        <a href="/cancel-ticket">Cancel Ticket</a>
+                    </div>
+                </div>
+                <div class="right">
+                    <a href="#"><button class="btn btn-primary">Contact</button></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!--  -->
+    {% block body %} {%endblock%}
+    <!-- - -->
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container flex space-around ">
+            <div class="f_left">
+                <img class="logo" src="../static/images/logo1.png" alt="">
+                <div class="footer-socials">
+                    <a href="#"><img src="../static/images/fb.svg" alt=""></a>
+                    <a href="#"><img src="../static/images/insta.svg" alt=""></a>
+                    <a href="#"><img src="../static/images/twitter1.svg" alt=""></a>
+                    <a href="#"><img src="../static/images/linked-in.svg" alt=""></a>
+                </div>
+            </div>
+            <div class="f_mid">
+                <h3>QUICK LINKS</h3>
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/search-flights">Search Flights</a></li>
+                    <li><a href="/book-ticket">Book Ticket</a></li>
+                    <li><a href="/home#contact-section">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copy-right">
+                <p>Copyright 2021 @ Airline Reservation System.All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

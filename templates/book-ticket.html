@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block body %}
+<section id="book-ticket">
+    <h1 class="section-heading"><span>Book</span> Tickets</h1>
+    
+    <div class="book-ticket-container" >
+        <form action="/book-ticket" method="post" name="book_ticket-form">
+            
+            <div>
+                <span id="fid-msg">{{f_id_msg}}</span>
+            </div>
+            <div class="form-elements">
+                <label for="bt_flight_id">Fligth Id</label>
+                <input type="text" name="bt_flight_id" id="flight_id" required>
+            </div>
+            <div class="form-elements">
+                <label for="bt_pname">Name</label>
+                <input type="text" name="bt_pname" id="name" required>
+            </div>
+            <!-- <div class="form-elements">
+                <label for="bt_fclass">Flight Class</label>
+                <select name="bt_fclass" id="f_class" required>
+                    <option value="Economic Class">Economic Class</option>
+                    <option value="Business Class">Business Class</option>
+                    <option value="First Class">First Class</option>
+                </select>
+            </div> -->
+            <!-- <div class="form-elements">
+                <input type="submit" class="btn btn-primary" value="Calculate Price">
+            </div> -->
+            <div class="form-elements">
+                <label for="price">Price</label>
+                <input type="text" name="bt_price" id="bt_price" required>
+            </div>
+            <div class="form-elements">
+                <input type="submit" class="btn btn-primary" value="Book">
+            </div>
+            <div>
+                <span id="book-ticket-msg" >{{book_msg}}</span>
+            </div>
+        </form>
+    </div>
+</section>
+
+{% endblock %}

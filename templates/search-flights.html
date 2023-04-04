@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+{% block body %}
+<section id="search-flights">
+    <h1 class="section-heading">Search <span>Flights</span></h1>
+    <div class="sflight-container">
+        <form action="/search-flights" method="post" id="src_dest">
+            <div class="form-1">
+                <div class="form-elements">
+                    <label for="from_city">Source</label>
+                    <select name="from_city" id="from_city" required form="src_dest">
+                        <option value=""></option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Kolkata">Kolkata</option>
+                    </select>
+                </div>
+                <div class="form-elements">
+                    <label for="to_city">Destination</label>
+                    <select name="to_city" id="to_city" required form="src_dest">
+                        <option value=""></option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Kolkata">Kolkata</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-elements">
+                <input type="submit" class="btn btn-primary" value="Show Flights">
+            </div>
+        </form>
+    </div>
+    <hr>
+    <div>
+    <!-- <h1>{{error_msg}}</h1> -->
+    <div><span class="error_msg">{{error_msg}}</span></div>
+        <table>
+            <thead>
+                <tr>
+                    <th>flight_id</th>
+                    <th>Flight_no</th>
+                    <th>source</th>
+                    <th>destination</th>
+                    <th>departure</th>
+                    <th>arrival</th>
+                    <th>Total Seats</th>
+                    <th>price</tP>
+                    <!-- <th>First price</th>
+                    <th>Business price</th> -->
+                    <th>Available Seats</th>
+                </tr>
+                </thead>    
+                <tbody>
+                {% for row in content %}    
+                    <tr>
+                        <td>{{row.0}}</td>
+                        <td>{{row.1}}</td>
+                        <td>{{row.2}}</td>
+                        <td>{{row.3}}</td>
+                        <td>{{row.4}}</td>
+                        <td>{{row.5}}</td>
+                        <td>{{row.6}}</td>
+                        <td>{{row.7}}</td>
+                        <td>{{row.8}}</td>
+                        <td>{{row.9}}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+        </table>
+    </div>
+</section>
+
+{% endblock %}
